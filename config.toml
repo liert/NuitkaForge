@@ -1,0 +1,110 @@
+# Nuitka Forge 配置文件
+# 直接编辑本文件，或使用 nuitka-forge config 命令管理
+
+[section_filter]
+
+# 前缀匹配：隐藏以此开头的 section（仅用 "XXX." 形式，避免误匹配 "XXXyyy"）
+hide_prefixes = [
+    # 图像处理
+    "PIL.",
+    # 科学计算
+    "numpy.", "scipy.", "pandas.",
+    # 计算机视觉
+    "cv2.",
+    # 加密/安全
+    "cryptography.", "cffi.", "pycparser.", "rsa.", "pyasn1.",
+    # XML/HTML
+    "lxml.",
+    # Excel
+    "openpyxl.", "et_xmlfile.",
+    # 类型系统
+    "pydantic.", "pydantic_core.", "annotated_types.", "typing_inspection.",
+    # HTTP 客户端
+    "httpx.", "httpcore.", "h11.", "requests.", "urllib3.",
+    "charset_normalizer.", "certifi.", "idna.", "anyio.",
+    # ADB / 设备控制
+    "adbutils.", "uiautomator2.",
+    # CLI
+    "click.",
+    # 日期
+    "dateutil.",
+    # 文件锁
+    "filelock.",
+    # 火山引擎 SDK
+    "volcenginesdkcore.", "volcenginesdkarkruntime.", "volcenginesdkark.",
+    # 压缩
+    "brotli.", "zstandard.", "lz4.",
+    # GUI
+    "tkinter.",
+    # 代码高亮
+    "pygments.",
+    # 测试
+    "pytest.", "unittest.", "_pytest.",
+    # 其他
+    "google.", "google.protobuf.", "grpc.",
+    "setuptools.", "pkg_resources.",
+    "pip.", "IPython.", "matplotlib.",
+    "sphinx.", "sentry_sdk.", "celery.",
+    "redis.", "boto3.", "botocore.",
+    "azure.", "aiohttp.", "websocket.",
+    "retry.", "socks.", "colorama.",
+]
+
+# 精确匹配：隐藏 section 名称完全等于此值的项
+# 裸包名放在这里，不放 hide_prefixes，避免误匹配 "XXXyyy" 等
+hide_names = [
+    # 图像处理
+    "PIL",
+    # 科学计算
+    "numpy", "scipy", "pandas",
+    # 计算机视觉
+    "cv2",
+    # 加密/安全
+    "cryptography", "cffi", "pycparser", "pyOpenSSL", "rsa", "pyasn1",
+    # XML/HTML
+    "lxml",
+    # Excel
+    "openpyxl", "et_xmlfile",
+    # 类型系统
+    "pydantic", "pydantic_core", "typing_extensions",
+    "annotated_types", "typing_inspection",
+    # HTTP 客户端
+    "httpx", "httpcore", "h11", "requests", "urllib3",
+    "charset_normalizer", "certifi", "idna", "anyio",
+    # ADB / 设备控制
+    "adbutils", "uiautomator2",
+    # CLI
+    "click",
+    # 日期
+    "dateutil",
+    # 文件锁
+    "filelock",
+    # 火山引擎 SDK
+    "volcenginesdkcore", "volcenginesdkarkruntime", "volcenginesdkark",
+    # 压缩
+    "brotli", "zstandard", "lz4",
+    # 数据库
+    "sqlite3", "pymysql", "psycopg2",
+    # GUI
+    "tkinter", "PyQt5", "PyQt6", "PySide2", "PySide6", "wx", "kivy",
+    # 代码高亮
+    "pygments",
+    # Web
+    "flask", "django", "fastapi", "starlette", "uvicorn", "gunicorn", "tornado",
+    # 测试
+    "pytest", "unittest", "_pytest",
+    # 其他
+    "google", "google.protobuf", "grpc",
+    "setuptools", "pkg_resources",
+    "wheel", "pip", "IPython", "jupyter",
+    "matplotlib", "seaborn", "bokeh", "plotly",
+    "tqdm", "click", "rich", "pygments",
+    "yaml", "ruamel", "toml", "tomllib", "tomli", "colorama",
+    "docutils", "sphinx",
+    "sentry_sdk", "celery",
+    "redis", "boto3", "botocore",
+    "azure", "httpx", "aiohttp",
+    "websocket", "paramiko", "fabric", "invoke",
+    "uiautomator2", "typing_inspection",
+    "retry", "decorator", "deprecation", "ntplib", "six", "socks",
+]

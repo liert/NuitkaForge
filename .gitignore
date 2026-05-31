@@ -1,0 +1,28 @@
+# 测试用的 EXE 文件
+*.exe
+
+# 开发文档
+docs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# 虚拟环境
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.claude/
+
+# OS
+Thumbs.db
+.DS_Store
