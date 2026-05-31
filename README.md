@@ -105,20 +105,6 @@ python -m nuitka_forge replace-constants mask.dll \
 因此支持不同长度的字符串或公钥修改。修改后仍需确保内容本身符合目标程序的
 业务格式要求。
 
-## 高级用法：替换 mask.dll 中的 RSA 公钥
-
-先导出包含公钥的 section，修改 JSON 中的 PEM 字符串，再写回 `mask.dll`：
-
-```bash
-python -m nuitka_forge replace-constants mask.dll --dump-section "__main__" -o __main__.json
-python -m nuitka_forge replace-constants mask.dll --dump-section "__parents_main__" -o __parents_main__.json
-python -m nuitka_forge replace-constants mask.dll \
-  --replace-section __main__.json __parents_main__.json \
-  -o mask.patch.dll
-```
-
-如果同一个公钥同时存在于多个 section 中，应保持这些副本一致。
-
 ## 项目结构
 
 ```
